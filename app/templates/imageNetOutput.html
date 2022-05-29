@@ -1,0 +1,13 @@
+{% extends "home1.html" %}
+
+{% block content %}
+    <h1>ImageNet Classifier</h1>
+    <div style="display:inline-block;vertical-align:top;">
+    <img src="{{url_for('static', filename=file_in)}}" alt="your input image!!" height="300" title="Input Image">
+    </div>
+    <div style="display:inline-block;">
+    <p>Identified as: "{{img_obj}}" with accuracy of: {{accuracy}}%</p>
+    </div>
+    <br>
+    <a href="{{url_for('ImageNet.upload_image')}}"> check for new image</a>
+{% endblock %}

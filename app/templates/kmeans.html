@@ -1,0 +1,28 @@
+{% extends "home1.html" %}
+
+{% block content %}
+    <h1>Welcome to the dominant colors identification using K-Means Algo.</h1>
+    <h2>Please upload your input image below.</h2>
+      <form action = "/kmeans/output" method = "POST"
+      enctype = "multipart/form-data">
+          <div class="container">
+         <input type = "file" name = "image" accept="image/png, image/jpg" />
+         <input type = "submit"/>
+          </div>
+      </form>
+
+<!--    {% if message %}-->
+<!--    <h3>{{message}} </h3>-->
+<!--        <br>-->
+<!--        <img src="{{url_for('static', filename=img)}}" alt="your uploaded image!!">-->
+<!--        <form action="/kmeans/output" method = "POST" enctype = "multipart/form-data">-->
+<!--        <div><label for="n_clusters">Enter the number of clusters:</label>-->
+<!--        <input type="number" id="n_clusters" name="n_clusters" ></div>-->
+<!--        <div>    <label for="maxItr">Enter the max number of Iterations to converge KMeans:</label>-->
+<!--        <input type="number" id="maxItr" name="maxItr"></div>-->
+<!--        <div><label for="file_name">file_name: </label>-->
+<!--            <input type="text" id="file_name" value="{{img}}" name="file_name" readonly></div>-->
+<!--        <div><input type="submit" value="Submit"></div>-->
+<!--        </form>-->
+<!--    {% endif %}-->
+{% endblock %}

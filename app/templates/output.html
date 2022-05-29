@@ -1,0 +1,9 @@
+{% extends "home1.html" %}
+
+{% block content %}
+    <h1>The output for the K-Means Algo is as follows.</h1>
+    <img src="{{url_for('static', filename=file_in)}}" alt="your input image!!" height="400" title="Input Image">
+    <img src="{{url_for('static', filename=file_out)}}" alt="your output image!!" height="400" title="Output Image">
+    <br>
+    <a href="{{url_for('KMeans.kmeans')}}"> check for new image</a>
+{% endblock %}
